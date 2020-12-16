@@ -36,7 +36,7 @@ class MainPresenterUnitTest {
 
         val underTest = MainPresenter(resources)
         underTest.sayHello()
-        verify(exactly = 0) { view.name }
+        verify(exactly = 1) { view.name }
         verify(exactly = 0) { view.sayHello(any()) }
     }
 }
