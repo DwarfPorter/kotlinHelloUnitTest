@@ -3,6 +3,10 @@ jdk: oraclejdk8
 sudo: false
 dist : trusty
 
+env:
+  global:
+  - ANDROID_API=27
+
 android:
   components:
     # Uncomment the lines below if you want to
@@ -13,7 +17,6 @@ android:
     # The BuildTools version used by your project
     - build-tools-$ANDROID_BUILD_TOOLS
     - android-$ANDROID_API
-    - android-22
 
     # Additional components
     - extra-google-google_play_services
@@ -53,4 +56,4 @@ cache:
     - $HOME/.gradle/wrapper/
     - $HOME/.android/build-cache
    
-script: ./gradlew app:test
+script: ./gradlew test
