@@ -31,7 +31,6 @@ class ModelUserUnitTest {
         val underTest = ModelUser(resources, expected)
         val actual = underTest.name
         assertEquals(expected, actual)
-        assertTrue(true)
-        assertFalse(false)
+        assertTrue(false)
     }
 }
