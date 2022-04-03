@@ -2,7 +2,9 @@ language: android
 jdk: oraclejdk8
 sudo: false
 dist : trusty
-
+env:
+  global:
+  - ANDROID_API=26
 android:
   components:
     # Uncomment the lines below if you want to
